@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/belen-albeza/langrpg",
   "dependencies": {
+    "bcrypt": "^0.8.0",
     "good": "^5.1.0",
     "good-console": "^4.0.0",
     "hapi": "^8.0.0",

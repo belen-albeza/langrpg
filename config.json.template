@@ -1,4 +1,7 @@
 {
   "host": "0.0.0.0",
-  "port": 3000
+  "port": 3000,
+  "users": {
+    "<some_user>": "<bcrypt_hashed_password>"
+  }
 }
