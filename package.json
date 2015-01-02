@@ -4,7 +4,9 @@
   "description": "Gamified app for tracking your language study",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-server": "nodemon -e js,html index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/belen-albeza/langrpg/issues"
   },
-  "homepage": "https://github.com/belen-albeza/langrpg"
+  "homepage": "https://github.com/belen-albeza/langrpg",
+  "dependencies": {
+    "good": "^5.1.0",
+    "good-console": "^4.0.0",
+    "hapi": "^8.0.0",
+    "nconf": "^0.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.1"
+  }
 }
