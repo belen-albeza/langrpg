@@ -29,6 +29,8 @@
     "good-console": "^4.0.0",
     "hapi": "^8.0.0",
     "hapi-auth-basic": "^2.0.0",
+    "leveldown": "^1.0.0",
+    "levelup": "git://github.com/belen-albeza/node-levelup",
     "nconf": "^0.7.1"
   },
   "devDependencies": {
