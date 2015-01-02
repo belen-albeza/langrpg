@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-server": "nodemon -e js,html index.js",
-    "start": "node index.js"
+    "setup": "node install",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,8 @@
     "hapi-auth-basic": "^2.0.0",
     "leveldown": "^1.0.0",
     "levelup": "git://github.com/belen-albeza/node-levelup",
-    "nconf": "^0.7.1"
+    "nconf": "^0.7.1",
+    "node-uuid": "^1.4.2"
   },
   "devDependencies": {
     "nodemon": "^1.2.1"
