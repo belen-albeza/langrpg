@@ -23,7 +23,13 @@ server.connection({
   port: nconf.get('port')
 });
 
-// TODO: setup template engine
+// set swig as the template engine for views
+server.views({
+  engines: {
+    html: require('swig')
+  },
+  path: './views'
+});
 
 // -----------------------------------------------------------------------------
 // hapi plugins
