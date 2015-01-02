@@ -1,6 +1,13 @@
+'use strict';
+
 var nconf = require('nconf');
+// hapi + plugins
 var Hapi = require('hapi');
 var Good = require('good');
+var AuthBasic = require('hapi-auth-basic');
+// local
+var users = require('./lib/users');
+var site = require('./lib/site');
 
 // -----------------------------------------------------------------------------
 // setup server
@@ -33,6 +40,12 @@ server.register({
   }
 }, function (err) { if (err) throw err; });
 
+// HTTP basic auth plugin
+server.register(AuthBasic, function (err) {
+  if (err) { throw err; }
+  server.auth.strategy('simple', 'basic', { validateFunc: users.validateLogin })
+});
+
 // -----------------------------------------------------------------------------
 // routes
 // -----------------------------------------------------------------------------
@@ -40,8 +53,9 @@ server.register({
 server.route([{
   method: 'GET',
   path: '/',
-  handler: function (request, reply) {
-    reply('Waka waka');
+  config: {
+    auth: 'simple',
+    handler: site.home
   }
 }]);
 

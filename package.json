@@ -27,6 +27,7 @@
     "good": "^5.1.0",
     "good-console": "^4.0.0",
     "hapi": "^8.0.0",
+    "hapi-auth-basic": "^2.0.0",
     "nconf": "^0.7.1"
   },
   "devDependencies": {
